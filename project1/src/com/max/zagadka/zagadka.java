@@ -3,34 +3,33 @@ package com.max.zagadka;
 import java.util.Scanner;
 
 public class zagadka {
-    public static void main (String [] args) {
-        String answer;
+    public static void main(String[] args) {
+        String str;
         boolean exit;
         System.out.println("Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает");
-        Scanner inputAnswer = new Scanner (System.in);
-
-        exit = false;
-        for(int i = 1; i <= 3; i++){
-            answer = inputAnswer.next();
-            switch (answer){
-                case ("Заархивированный вирус"):
-                    System.out.println ("Правильно!");
+        int count = 0;
+        Scanner scan1 = new Scanner(System.in);
+        for (int i=0;i<3;i++){
+            System.out.print("Ответ: ");
+            str = scan1.nextLine();
+            if (str.equalsIgnoreCase("заархивированный вирус")){
+                System.out.println("Правильно!");
+                break;
+            } else if (str.equalsIgnoreCase("подсказка")){
+                if (i>0){
+                    System.out.println("Подсказка уже недоступна");
+                    i--;
+                } else {
+                    count++;
+                    System.out.println("Подсказка: winrar");
+                }
+            } else if(!str.equalsIgnoreCase("заархивированный вирус")){
+                if (count == 1){
+                    System.out.println("Обидно, приходи в другой раз");
                     break;
-                case ("Подсказка"):
-                    if (i == 1){
-                        exit = true;
-                        System.out.println("winrar");
-                    }
-                    else
-                        System.out.println("Подсказка уже недоступна");
-                default:
-                    if ((i==3) || ((exit == true) && (i != 1))) {
-                        System.out.println("Обидно, приходи в другой раз");
-                        i = 3;
-                        break;
-                    }
-                    else
-                        System.out.println("Подумай еще!");
+                } else if (i<2) {
+                    System.out.println("Подумай еще!");
+                }else System.out.println("Обидно, приходи в другой раз");
             }
         }
     }
