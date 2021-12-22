@@ -1,5 +1,4 @@
 package com.max.zagadka;
-
 import java.util.Scanner;
 
 public class zagadka {
