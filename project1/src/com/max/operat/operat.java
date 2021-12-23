@@ -8,10 +8,10 @@ public class operat {
         double average = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите три числа ");
-        for (int i=0;i<3;i++){
+        for (int i = 0;i < 3;i++){
             array[i] = scanner.nextInt();
         }
-        for (int i=0;i < array.length;i++){
+        for (int i = 0;i < array.length;i++){
             sum = sum + array[i];
         }
         average = sum/array.length;
