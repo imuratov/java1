@@ -17,14 +17,14 @@ public class cikliten {
         }
         System.out.println("Номер строки массива для вывода");
         int rowNum = scanner.nextInt();
-        if (rowNum >= (a-1)){
-            throw new Exception("Такой строки не существует!");
+        while (rowNum > (a-1)){
+            System.out.println("Такой строки не существует! Введите число меньше " + (a));
+            System.out.println("Номер строки массива для вывода");
+            rowNum = scanner.nextInt();
         }
-        else {
             System.out.println(rowNum);
             for (int i = 0; i < array[rowNum].length; i++) {
                 System.out.print(array[rowNum][i] * 3 + " ");
             }
-        }
     }
 }
