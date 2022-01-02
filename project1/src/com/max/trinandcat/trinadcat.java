@@ -14,7 +14,7 @@ public class trinadcat {
                 count = count + 1;
                 System.out.println(array[i]);
             }
-            System.out.println("Кол-во слов: " + count);
         }
+        System.out.println("Кол-во слов: " + count);
     }
 }
