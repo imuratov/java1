@@ -2,7 +2,7 @@ package com.max.cikliten;
 import java.util.Scanner;
 
 public class cikliten {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Кол-во строк: ");
         int a = scanner.nextInt();
@@ -17,9 +17,14 @@ public class cikliten {
         }
         System.out.println("Номер строки массива для вывода");
         int rowNum = scanner.nextInt();
-        System.out.print(rowNum);
-        for (int i = 0; i < array[rowNum].length; i++) {
-            System.out.print(array[rowNum][i] * 3 + " ");
+        if (rowNum >= (a-1)){
+            throw new Exception("Такой строки не существует!");
+        }
+        else {
+            System.out.println(rowNum);
+            for (int i = 0; i < array[rowNum].length; i++) {
+                System.out.print(array[rowNum][i] * 3 + " ");
+            }
         }
     }
 }
