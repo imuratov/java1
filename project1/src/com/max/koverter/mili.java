@@ -36,7 +36,7 @@ public class mili {
                     System.out.println("Введен некорректный символ!");
             }
             System.out.println("Введите число");
-            double c = scan.nextInt();
+            double c = scan.nextDouble();
             if (b1 == true){
                 System.out.printf("Результат:\nГрамм: "+c+"\nКилограмм: "+c/1000+"\nЦентнер: "+c/100000+"\nТонны: "+c/1000000);
             } else if (b2 == true){
@@ -66,7 +66,7 @@ public class mili {
                     System.out.println("Введен некорректный символ!");
             }
             System.out.println("Введите число");
-            double c = scan.nextInt();
+            double c = scan.nextDouble();
             if (b1 == true){
                 System.out.println("Результат:\nСантиметр: "+c+"\nДециметр: "+c/10+"\nМетр:"+c/100+"\nКилометр: "+c/100000);
             } else if (b2 == true){
